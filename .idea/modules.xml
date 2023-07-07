@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/gestion_immobiliere.iml" filepath="$PROJECT_DIR$/gestion_immobiliere.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-contrat/microservice-contrat.iml" filepath="$PROJECT_DIR$/microservice-contrat/microservice-contrat.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-logement/microservice-logement.iml" filepath="$PROJECT_DIR$/microservice-logement/microservice-logement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-personne/microservice-personne.iml" filepath="$PROJECT_DIR$/microservice-personne/microservice-personne.iml" />
     </modules>
   </component>
 </project>
