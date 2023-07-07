@@ -1,5 +1,6 @@
 package gestion.sn.microservicepersonne.controller;
 
+import gestion.sn.microservicepersonne.dto.PersonneDTO;
 import gestion.sn.microservicepersonne.models.Personne;
 import gestion.sn.microservicepersonne.services.PersonneService;
 import lombok.RequiredArgsConstructor;
@@ -15,22 +16,22 @@ public class PersonneController{
     private final PersonneService service;
 
     @PostMapping
-    public ResponseEntity<Personne> addPersonne(@RequestBody Personne personne) {
-        return ResponseEntity.ok(service.addPersonne(personne));
+    public ResponseEntity<PersonneDTO> addPersonne(@RequestBody PersonneDTO dto) {
+        return ResponseEntity.ok(service.addPersonne(dto));
     }
 
     @PutMapping
-    public ResponseEntity<Personne> updatePersonne(@RequestBody Personne personne) {
-        return  ResponseEntity.ok(service.updatePersonne(personne));
+    public ResponseEntity<PersonneDTO> updatePersonne(@RequestBody PersonneDTO dto) {
+        return  ResponseEntity.ok(service.updatePersonne(dto));
     }
 
     @GetMapping
-    public ResponseEntity<List<Personne>>  getAllPersonnes() {
+    public ResponseEntity<List<PersonneDTO>>  getAllPersonnes() {
         return ResponseEntity.ok(service.getAllPersonnes());
     }
 
     @GetMapping("/{idPers}")
-    public Personne getPersonne(@PathVariable(name = "idPers") Long idPers) {
+    public PersonneDTO getPersonne(@PathVariable(name = "idPers") Long idPers) {
         return service.getPersonne(idPers);
     }
 
