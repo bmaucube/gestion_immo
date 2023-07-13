@@ -7,8 +7,8 @@ import gestion.immo.microservicelogement.model.Immeuble;
 import java.util.List;
 
 public interface ImmeubleService {
-    ImmeubleDTO saveImmeuble(ImmeubleDTO immeuble);
-    ImmeubleDTO updateImmeuble(ImmeubleDTO immeuble);
+    ImmeubleDTO saveImmeuble(ImmeubleDTO dto);
+    ImmeubleDTO updateImmeuble(ImmeubleDTO dto);
     ImmeubleDTO findImmeuble(Long idImmeuble);
     List<ImmeubleDTO> findAll();
     void deleteImmeuble(Long id);

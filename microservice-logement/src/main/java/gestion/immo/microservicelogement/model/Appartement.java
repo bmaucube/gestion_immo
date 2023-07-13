@@ -14,12 +14,9 @@ import lombok.NoArgsConstructor;
 public class Appartement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long num;
+    private Long idApp;
     private Long idPers;
     @ManyToOne
     private Immeuble immeuble;
     private Long nbChambre;
-
-    @ManyToOne
-    private Appartement appartement;
 }

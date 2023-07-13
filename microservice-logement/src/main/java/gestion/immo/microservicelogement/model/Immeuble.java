@@ -1,6 +1,7 @@
 package gestion.immo.microservicelogement.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,5 +26,6 @@ public class Immeuble {
     private Cite cite;
     private Long idPers;
     @OneToMany
+    @JsonIgnore
     private List<Appartement> appartements;
 }

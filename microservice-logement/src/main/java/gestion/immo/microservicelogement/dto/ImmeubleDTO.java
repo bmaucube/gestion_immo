@@ -1,5 +1,6 @@
 package gestion.immo.microservicelogement.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import gestion.immo.microservicelogement.model.Appartement;
 import gestion.immo.microservicelogement.model.Cite;
 import jakarta.persistence.*;
@@ -18,8 +19,10 @@ public class ImmeubleDTO {
     private Long id;
     private String nom;
     private String adresse;
-    @ManyToOne
+
     private Cite cite;
     private Long idPers;
+
+    @JsonIgnore
     private List<Appartement> appartements;
 }

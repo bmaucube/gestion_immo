@@ -1,5 +1,6 @@
 package gestion.immo.microservicelogement.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import gestion.immo.microservicelogement.model.Immeuble;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,5 +20,7 @@ import java.util.List;
 public class CiteDTO {
     private Long id;
     private String nom;
+
+    @JsonIgnore
     private List<Immeuble> immeubles;
 }

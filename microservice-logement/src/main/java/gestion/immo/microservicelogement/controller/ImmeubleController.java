@@ -26,7 +26,7 @@ public class ImmeubleController{
     }
 
 
-    @GetMapping("{/idImmeuble}")
+    @GetMapping("/{idImmeuble}")
     public ImmeubleDTO findImmeuble(@PathVariable("idImmeuble") Long idImmeuble) {
         return service.findImmeuble(idImmeuble);
     }
@@ -37,7 +37,7 @@ public class ImmeubleController{
     }
 
     @DeleteMapping("/delete/{idImmeuble}")
-    public void deleteImmeuble(@PathVariable Long id) {
+    public void deleteImmeuble(@PathVariable(name = "idImmeuble") Long id) {
         service.deleteImmeuble(id);
     }
 }

@@ -1,5 +1,6 @@
 package gestion.immo.microservicelogement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.source.doctree.IndexTree;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,5 +22,6 @@ public class Cite {
     private Long id;
     private String nom;
     @OneToMany
+    @JsonIgnore
     private List<Immeuble> immeubles;
 }
