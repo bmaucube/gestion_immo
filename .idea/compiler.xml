@@ -7,12 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microservice-personne" />
         <module name="microservice-logement" />
         <module name="microservice-contrat" />
+        <module name="microservice-personne" />
+        <module name="gateway-service" />
+        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="discovery-service" target="17" />
+      <module name="gateway-service" target="17" />
       <module name="microservice-articles" target="17" />
       <module name="microservice-contrat" target="17" />
       <module name="microservice-logement" target="17" />
@@ -21,6 +25,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="discovery-service" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="microservice-articles" options="-parameters" />
       <module name="microservice-contrat" options="-parameters" />
       <module name="microservice-logement" options="-parameters" />

@@ -1,0 +1,19 @@
+# configuration statique
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    discovery:
+      enabled: true #pour eviter d'enregistrer
+#    gateway:
+#      routes:
+#        - id : r1
+#          uri: http://localhost:8081
+#          predicates:
+#            - Path= /customers/**
+#        - id: r2
+#          uri: http://localhost:8083
+#          predicates:
+#            - Path= /products/**
