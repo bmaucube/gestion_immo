@@ -47,10 +47,22 @@ public class PersonneServiceImpl implements PersonneService {
     @Override
     public PersonneDTO fromEntity(Personne personne) {
         return modelMapper.map(personne, PersonneDTO.class);
+              /*  PersonneDTO.builder()
+                        .nom(personne.getNom())
+                        .prenom(personne.getPrenom())
+                        .CIN(personne.getCIN())
+                        .email(personne.getEmail())
+                        .build();*/
     }
 
     @Override
     public Personne toEntity(PersonneDTO personneDTO) {
         return modelMapper.map(personneDTO, Personne.class);
+        /*return Personne.builder()
+                .nom(personneDTO.getNom())
+                .prenom(personneDTO.getPrenom())
+                .CIN(personneDTO.getCIN())
+                .email(personneDTO.getEmail())
+                .build();*/
     }
 }

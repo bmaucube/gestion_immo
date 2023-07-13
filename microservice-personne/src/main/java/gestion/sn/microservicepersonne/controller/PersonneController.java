@@ -1,7 +1,6 @@
 package gestion.sn.microservicepersonne.controller;
 
 import gestion.sn.microservicepersonne.dto.PersonneDTO;
-import gestion.sn.microservicepersonne.models.Personne;
 import gestion.sn.microservicepersonne.services.PersonneService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

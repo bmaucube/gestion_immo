@@ -16,7 +16,7 @@ public class PersonneDTO {
     private String CIN;
     private String nom;
     private String  prenom;
-    private Date birthday;
+    //private Date birthday;
     private String email;
-    private String adresse;
+    //private String adresse;
 }
