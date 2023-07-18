@@ -9,6 +9,11 @@ import { UpdatePersonneComponent } from './update-personne/update-personne.compo
 import { PersonneDetailsComponent } from './personne-details/personne-details.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ImmeublesComponent } from './immeubles/immeubles/immeubles.component';
+import { CreateImmeubleComponent } from './immeubles/create-immeuble/create-immeuble.component';
+import { ContratsComponent } from './contrat/contrats/contrats.component';
+import { CreateContratComponent } from './contrat/create-contrat/create-contrat.component';
+import { HomeComponent } from './home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +22,11 @@ import {HttpClientModule} from "@angular/common/http";
     CretePersonneComponent,
     UpdatePersonneComponent,
     PersonneDetailsComponent,
+    ImmeublesComponent,
+    CreateImmeubleComponent,
+    ContratsComponent,
+    CreateContratComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

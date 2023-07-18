@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   actions: Array<any> = [
-    {title : 'Personnes', 'route':"/personnes", icon: "house"}
+    {title : 'Accueil', 'route':"/home", icon: "house-fill"},
+    {title : 'Personnes', 'route':"/personnes", icon: "people"},
+    {title : 'Immeubles', 'route':"/immeubles", icon: "buildings-fill"},
+    {title : 'Contrat', 'route':"/contrats", icon: "credit-card-fill"},
   ];
 
   currentAction: any;
