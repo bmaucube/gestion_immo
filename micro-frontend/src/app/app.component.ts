@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'micro-frontend';
+  actions: Array<any> = [
+    {title : 'Personnes', 'route':"/personnes", icon: "house"}
+  ];
+
+  currentAction: any;
+
+  setCurrentAction(action: any) {
+    this.currentAction = action;
+  }
+
 }

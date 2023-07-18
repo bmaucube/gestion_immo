@@ -1,42 +1,37 @@
-import { Component } from '@angular/core';
-import { Personne } from '../models/personne';
+import {Component, OnInit} from '@angular/core';
 import { PersonneService } from '../services/personne.service';
 import { Router } from '@angular/router';
+import {Personne} from "../../../model/personne.model";
 
 @Component({
   selector: 'app-personne',
   templateUrl: './personne.component.html',
   styleUrls: ['./personne.component.css']
 })
-export class PersonneComponent {
-  personnes ?: Personne[]
+export class PersonneComponent implements OnInit{
+  public personnes: Array<Personne> = [];
 
-  constructor(private service: PersonneService,
-    private router: Router) { }
+  constructor(private service: PersonneService) { }
 
   ngOnInit(): void {
     this.getPersonnes();
   }
 
   private getPersonnes(){
-    this.service.getPersonnes().subscribe(data => {
-      this.personnes = data;
-    });
+    this.service.getPersonnes()
+      .subscribe({
+        next : data => {
+          this.personnes = data
+        },
+        error : err => {console.log(err)}
+      });
   }
 
+  handleUpdatePersonne(personne: Personne) {
 
-  personneDetails(idPers: number){
-    this.router.navigate(['personne-details', idPers]);
   }
 
-  updatePersonne(idPers: number){
-    this.router.navigate(['update-personne', idPers]);
-  }
+  handleDeletePersonne(personne: Personne) {
 
-  deletePersonne(idPers: number){
-    this.service.deletePersonne(idPers).subscribe( data => {
-      console.log(data);
-      this.getPersonnes();
-    })
-}
+  }
 }

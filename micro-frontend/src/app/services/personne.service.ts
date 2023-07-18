@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { Personne } from '../models/personne';
+import {Personne} from "../../../model/personne.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class PersonneService {
   constructor(private httpClient:HttpClient) { }
 
   getPersonnes(): Observable<Personne[]>{
-    return this.httpClient.get<Personne[]>(`${this.baseURL}`);
+    return this.httpClient.get<Array<Personne>>(`${this.baseURL}`);
   }
 
   createPesonne(personne: Personne): Observable<Object>{
