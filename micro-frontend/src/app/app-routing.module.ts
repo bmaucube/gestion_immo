@@ -9,6 +9,10 @@ import {CreateImmeubleComponent} from "./immeubles/create-immeuble/create-immeub
 import {ContratsComponent} from "./contrat/contrats/contrats.component";
 import {CreateContratComponent} from "./contrat/create-contrat/create-contrat.component";
 import {HomeComponent} from "./home/home/home.component";
+import {HeaderComponent} from "./header/header.component";
+import {FooterComponent} from "./footer/footer.component";
+import {ConnexionComponent} from "./connexion/connexion.component";
+import {InscriptionComponent} from "./inscription/inscription.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -17,7 +21,11 @@ const routes: Routes = [
   {path: 'immeubles', component: ImmeublesComponent},
   {path: 'create-immeuble', component: CreateImmeubleComponent},
   {path: 'contrats', component: ContratsComponent},
-  {path: 'create-contrat', component: CreateContratComponent}
+  {path: 'create-contrat', component: CreateContratComponent},
+  {path: 'header', component: HeaderComponent},
+  {path: 'footer', component: FooterComponent},
+  {path: 'connexion', component: ConnexionComponent},
+  {path: 'inscription', component: InscriptionComponent}
 ];
 
 @NgModule({

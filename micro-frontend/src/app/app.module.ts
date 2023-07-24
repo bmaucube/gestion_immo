@@ -14,6 +14,10 @@ import { CreateImmeubleComponent } from './immeubles/create-immeuble/create-imme
 import { ContratsComponent } from './contrat/contrats/contrats.component';
 import { CreateContratComponent } from './contrat/create-contrat/create-contrat.component';
 import { HomeComponent } from './home/home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { HomeComponent } from './home/home/home.component';
     ContratsComponent,
     CreateContratComponent,
     HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    InscriptionComponent,
+    ConnexionComponent,
   ],
   imports: [
     BrowserModule,
