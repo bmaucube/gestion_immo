@@ -1,0 +1,5 @@
+.home {
+  background-image: url('../../../assets/images/house.jpeg');
+  background-size: cover; /* Pour ajuster la taille de l'image au conteneur */
+  /* Ajoutez d'autres propriétés de style pour positionner ou styliser l'image si nécessaire */
+}
