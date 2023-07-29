@@ -1,0 +1,26 @@
+<div class="container mt-2">
+  <div class="card">
+    <div class="card-header">Liste des personnes</div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of personnes | async">
+          <td>{{p.nom}}</td>
+          <td>{{p.prenom}}</td>
+          <td>{{p.email}}</td>
+          <td>
+            <button (click)="handleDeletePerson(p)" class="btn btn-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

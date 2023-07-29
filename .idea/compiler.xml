@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-logement" />
         <module name="microservice-contrat" />
-        <module name="utilisateur-service" />
         <module name="microservice-personne" />
         <module name="gateway-service" />
         <module name="discovery-service" />
@@ -17,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="microservice-articles" target="17" />
+      <module name="utilisateur-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
