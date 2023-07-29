@@ -13,19 +13,25 @@ import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {ConnexionComponent} from "./connexion/connexion.component";
 import {InscriptionComponent} from "./inscription/inscription.component";
+import {LoginComponent} from "./login/login.component";
+import {AdminTemplateComponent} from "./admin-template/admin-template.component";
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'personnes', component: PersonneComponent},
-  {path: 'create-personne', component: CretePersonneComponent},
-  {path: 'immeubles', component: ImmeublesComponent},
-  {path: 'create-immeuble', component: CreateImmeubleComponent},
-  {path: 'contrats', component: ContratsComponent},
-  {path: 'create-contrat', component: CreateContratComponent},
-  {path: 'header', component: HeaderComponent},
-  {path: 'footer', component: FooterComponent},
-  {path: 'connexion', component: ConnexionComponent},
-  {path: 'inscription', component: InscriptionComponent}
+  {path: "login", component: LoginComponent},
+  {path: "", redirectTo: "/login", pathMatch: "full"},
+  {path: "admin", component: AdminTemplateComponent,
+    children: [
+      {path: 'personnes', component: PersonneComponent},
+      {path: 'create-personne', component: CretePersonneComponent},
+      {path: 'immeubles', component: ImmeublesComponent},
+      {path: 'create-immeuble', component: CreateImmeubleComponent},
+      {path: 'contrats', component: ContratsComponent},
+      {path: 'create-contrat', component: CreateContratComponent},
+      {path: 'header', component: HeaderComponent},
+      {path: 'footer', component: FooterComponent},
+      {path: 'connexion', component: ConnexionComponent},
+      {path: 'inscription', component: InscriptionComponent}
+    ]},
 ];
 
 @NgModule({
